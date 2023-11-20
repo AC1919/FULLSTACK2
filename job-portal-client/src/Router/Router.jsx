@@ -15,7 +15,7 @@ import Home from "../Pages/Home";
 
 
 const router = createBrowserRouter([
-    {path: "https://fullstack-2.vercel.app/",
+    {path: "/",
     element: <App/>,
     children:[
         {
