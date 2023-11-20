@@ -19,28 +19,28 @@ const router = createBrowserRouter([
     element: <App/>,
     children:[
         {
-            path:"https://fullstack-2.vercel.app/",element:<Home/>
+            path:"/",element:<Home/>
         },
         {
-            path: "https://fullstack-2.vercel.app/post-job",
+            path: "/post-job",
             element:<CreateJob/>
         },
         {
-            path: "https://fullstack-2.vercel.app/my-job",
+            path: "/my-job",
             element:<MyJobs/>
         },
         {
-            path: "https://fullstack-2.vercel.app/salary",
+            path: "/salary",
             element:<SalaryPage/>
         },
         {
-            path: "https://fullstack-2.vercel.app/edit-job/:id",
+            path: "edit-job/:id",
             element:<UpdateJob/>,
             loader:({params})=> fetch(`http://localhost:3000/all-jobs/${params.id}`)
         },
         
         {
-            path: "https://fullstack-2.vercel.app/job/:id",
+            path: "/job/:id",
             element:<JobDetails/>,
             
         },
@@ -50,11 +50,11 @@ const router = createBrowserRouter([
     
     },
     {
-        path:"https://fullstack-2.vercel.app/login",
+        path:"/login",
         element:<Login/>
     },
     {
-        path:"https://fullstack-2.vercel.app/logout",
+        path:"/logout",
         element:<Logout/>
     }
    
